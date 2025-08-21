@@ -23,11 +23,7 @@ async def lurk_command(cmd: ChatCommand):
     await cmd.reply("Thank you for choosing to stay with us. We hope you are having a good time. - Yesman Scrungle")
 
 async def hydrate_command(cmd: ChatCommand):
-    pygame.mixer.init()
-    pygame.mixer.music.set_volume(0.6)
-    pygame.mixer.music.load("scrungle_sounds/scrungle_hydrate.ogg")
-    pygame.mixer.music.play()
-    await cmd.reply("HONK! Conalo has been requested to drink fluids! - Yesman Scrungle")
+    await cmd.reply("User has been requested to drink fluids! - Yesman Scrungle")
 
 #-------------------------------------
 #test tts
@@ -51,7 +47,7 @@ async def on_ready(ready_event: EventData):
     await ready_event.chat.join_room(TARGET_CHANNEL)
 
     #Print ready Message
-    print("Yesman Scrungle has clocked in for their shift. Honk!")
+    print("TTS Bot ready")
 
 #Bot setup
 async def run_bot():
@@ -84,4 +80,5 @@ async def run_bot():
         await bot.close()
 
 asyncio.run(run_bot())
+
 #---------------------------------------------------------------------------------------------------------------------
